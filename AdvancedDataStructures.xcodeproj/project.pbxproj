@@ -10,6 +10,8 @@
 		9F5106CA1EA499D900B91D9F /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
 		9F5106CF1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */; };
 		9F5106D11EA499DA00B91D9F /* AdvancedDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F5106DB1EA49A1800B91D9F /* Bijection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DA1EA49A1800B91D9F /* Bijection.swift */; };
+		9F5106DE1EA4A3F400B91D9F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		9F5106C91EA499D900B91D9F /* AdvancedDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDataStructuresTests.swift; sourceTree = "<group>"; };
 		9F5106D01EA499DA00B91D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5106DA1EA49A1800B91D9F /* Bijection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bijection.swift; sourceTree = "<group>"; };
+		9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 		9F5106C21EA499D900B91D9F /* AdvancedDataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				9F5106DC1EA4A3DE00B91D9F /* Extensions */,
 				9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */,
 				9F5106C41EA499D900B91D9F /* Info.plist */,
+				9F5106DA1EA49A1800B91D9F /* Bijection.swift */,
 			);
 			path = AdvancedDataStructures;
 			sourceTree = "<group>";
@@ -84,6 +90,14 @@
 				9F5106D01EA499DA00B91D9F /* Info.plist */,
 			);
 			path = AdvancedDataStructuresTests;
+			sourceTree = "<group>";
+		};
+		9F5106DC1EA4A3DE00B91D9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,7 @@
 					9F5106BF1EA499D900B91D9F = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 884AY45F52;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					9F5106C81EA499D900B91D9F = {
@@ -198,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5106DE1EA4A3F400B91D9F /* FoundationExtensions.swift in Sources */,
+				9F5106DB1EA49A1800B91D9F /* Bijection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +341,7 @@
 		9F5106D51EA499DA00B91D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
@@ -336,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JeremieBenhamronBeen.AdvancedDataStructures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +362,7 @@
 		9F5106D61EA499DA00B91D9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
@@ -362,6 +382,7 @@
 		9F5106D81EA499DA00B91D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
 				INFOPLIST_FILE = AdvancedDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +395,7 @@
 		9F5106D91EA499DA00B91D9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
 				INFOPLIST_FILE = AdvancedDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
