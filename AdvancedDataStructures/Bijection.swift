@@ -25,9 +25,6 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
         return preImage.count
     }
     
-    
-    
-    
     //MARK:  Subscritps
     
     subscript(x:Domain)-> Codomain?{
