@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F5106CA1EA499D900B91D9F /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
+		9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
 		9F5106CF1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */; };
 		9F5106D11EA499DA00B91D9F /* AdvancedDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F5106DB1EA49A1800B91D9F /* Bijection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DA1EA49A1800B91D9F /* Bijection.swift */; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F5106CA1EA499D900B91D9F /* AdvancedDataStructures.framework in Frameworks */,
+				9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

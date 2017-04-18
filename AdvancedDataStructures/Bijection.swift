@@ -8,30 +8,30 @@
 
 import Foundation
 
-struct Bijection<Domain:Hashable,Codomain:Hashable>{
+public struct Bijection<Domain:Hashable,Codomain:Hashable>{
     //MARK: - Public API
     
     //MARK: Computed Properties
     
     //MARK: Stored Properties
-    var preImage:[Domain]{
+    public var preImage:[Domain]{
         return _preImage
     }
-    var image:[Codomain]{
+    public var image:[Codomain]{
         return _image
     }
     
     
-    var isEmpty:Bool{
+    public var isEmpty:Bool{
         return preImage.isEmpty
     }
     
-    var pairs:[(Domain,Codomain)]{
+    public var pairs:[(Domain,Codomain)]{
         return preImage.enumerated().map
             {(i:Int,x:Domain)->(Domain,Codomain) in return (x,image[i])}
     }
     
-    var description:String{
+    public var description:String{
         var description = ""
         guard !isEmpty else {return description}
         description += "\(pairs[0])"
@@ -43,7 +43,7 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
     
     //MARK:  Subscritps
     
-    subscript(x:Domain)-> Codomain?{
+    public subscript(x:Domain)-> Codomain?{
         get{
             return getImage(of: x)
         }
@@ -60,7 +60,7 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
     }
     
     
-    subscript(y:Codomain)-> Domain?{
+    public subscript(y:Codomain)-> Domain?{
         get{
             return getPreImage(of: y)
         }
@@ -78,17 +78,12 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
     
     //MARK: - Initializers
     
-    init() {
+    public init() {
         self.init(pairs: [])
     }
     
-    init?(preImage:[Domain], image:[Codomain]) {
-        guard preImage.count == image.count else {return nil}
-        self._preImage = preImage
-        self._image = image
-    }
     
-    init(pairs:[(Domain,Codomain)]) {
+    public init(pairs:[(Domain,Codomain)]) {
         self._preImage = [Domain]()
         self._image = [Codomain]()
         //Populate domain and codomain using pairs
@@ -142,27 +137,27 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
 }
 
 extension Bijection:Equatable{
-    static func ==(lhs: Bijection<Domain,Codomain>, rhs: Bijection<Domain,Codomain>) -> Bool{
+    public static func ==(lhs: Bijection<Domain,Codomain>, rhs: Bijection<Domain,Codomain>) -> Bool{
         return lhs.preImage == lhs.preImage && lhs.image == lhs.image
     }
 }
 
 extension Bijection:Collection{
-    typealias Index = Int
+    public typealias Index = Int
     
-    var startIndex: Int {
+    public var startIndex: Int {
         return 0
     }
     
-    var endIndex: Int {
+    public var endIndex: Int {
         return self.preImage.count
     }
     
-    func index(after i: Int) -> Int {
+    public func index(after i: Int) -> Int {
         return i + 1
     }
     
-    subscript(index: Int)->(Domain,Codomain){
+    public subscript(index: Int)->(Domain,Codomain){
         return self.pairs[index]
     }
 }

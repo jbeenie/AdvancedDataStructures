@@ -12,8 +12,7 @@ import XCTest
 
 class AdvancedDataStructuresTests: XCTestCase {
     
-    
-    var bijection1 = Bijection<Double,String>(preImage: [0.1,0.2,0.4], image: ["0.1","0.2","0.4"])
+    var bijection1 = Bijection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
     var bijection2 = Bijection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
     
     
@@ -60,14 +59,7 @@ class AdvancedDataStructuresTests: XCTestCase {
         print(bijection2.description)
         print(bijection2)
     }
-    
-    func testfailedInitialization(){
-        let failed1 = Bijection<Double,String>(preImage: [0.1,0], image: ["0.1"])
-        XCTAssert(failed1 ==  nil)
-        let failed2 = Bijection<Double,String>(preImage: [0.1,0], image: ["0.1","0.2","0.3"])
-        XCTAssert(failed2 ==  nil)
 
-    }
     
     func testReplace(){
         print(bijection2.description)
