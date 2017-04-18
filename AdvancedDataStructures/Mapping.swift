@@ -9,8 +9,8 @@
 import Foundation
 
 public struct Mapping<Domain,Codomain>{
-    var map: (Domain)->Codomain
-    var inverse: (Codomain)->Domain
+    private var map: (Domain)->Codomain
+    private var inverse: (Codomain)->Domain
     
     public subscript(x:Domain)-> Codomain{
         get{
@@ -24,6 +24,12 @@ public struct Mapping<Domain,Codomain>{
         get{
             return inverse(y)
         }
+    }
+    
+    init(map: @escaping (Domain)->Codomain, inverse: @escaping (Codomain)->Domain)
+    {
+        self.map = map
+        self.inverse = inverse
     }
     
 }

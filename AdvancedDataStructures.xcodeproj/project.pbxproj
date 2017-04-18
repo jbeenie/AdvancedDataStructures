@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0C35011EA6A4C600217605 /* InjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C35001EA6A4C600217605 /* InjectionTests.swift */; };
+		9F0C35031EA6A57400217605 /* MappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C35021EA6A57400217605 /* MappingTests.swift */; };
 		9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
-		9F5106CF1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */; };
 		9F5106D11EA499DA00B91D9F /* AdvancedDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F5106DE1EA4A3F400B91D9F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */; };
 		9F5EC7031EA5E79700D7CF6E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EC7021EA5E79700D7CF6E /* Injection.swift */; };
@@ -26,11 +27,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F0C35001EA6A4C600217605 /* InjectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionTests.swift; sourceTree = "<group>"; };
+		9F0C35021EA6A57400217605 /* MappingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingTests.swift; sourceTree = "<group>"; };
 		9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvancedDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedDataStructures.h; sourceTree = "<group>"; };
 		9F5106C41EA499D900B91D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5106C91EA499D900B91D9F /* AdvancedDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDataStructuresTests.swift; sourceTree = "<group>"; };
 		9F5106D01EA499DA00B91D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		9F5EC7021EA5E79700D7CF6E /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -97,7 +99,8 @@
 		9F5106CD1EA499DA00B91D9F /* AdvancedDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */,
+				9F0C35021EA6A57400217605 /* MappingTests.swift */,
+				9F0C35001EA6A4C600217605 /* InjectionTests.swift */,
 				9F5106D01EA499DA00B91D9F /* Info.plist */,
 			);
 			path = AdvancedDataStructuresTests;
@@ -234,7 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F5106CF1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift in Sources */,
+				9F0C35031EA6A57400217605 /* MappingTests.swift in Sources */,
+				9F0C35011EA6A4C600217605 /* InjectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
