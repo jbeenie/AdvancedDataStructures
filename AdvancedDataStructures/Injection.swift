@@ -1,14 +1,14 @@
 //
-//  Bijection.swift
+//  Injection.swift
 //  AdvancedDataStructures
 //
-//  Created by Jeremie Benhamron on 2017-04-16.
+//  Created by Jeremie Benhamron on 2017-04-17.
 //  Copyright © 2017 beenie.inc. All rights reserved.
 //
 
 import Foundation
 
-public struct Bijection<Domain:Hashable,Codomain:Hashable>{
+public struct Injection<Domain:Hashable,Codomain:Hashable>{
     //MARK: - Public API
     
     //MARK: Computed Properties
@@ -113,7 +113,7 @@ public struct Bijection<Domain:Hashable,Codomain:Hashable>{
     //MARK: - Setters
     
     
-    //if x or y are already mapped to other elements 
+    //if x or y are already mapped to other elements
     //this functions first removes those mappings
     // and then maps x to y to ensure bijectivity
     private mutating func map(x:Domain, toY y:Codomain){
@@ -136,13 +136,13 @@ public struct Bijection<Domain:Hashable,Codomain:Hashable>{
     }
 }
 
-extension Bijection:Equatable{
-    public static func ==(lhs: Bijection<Domain,Codomain>, rhs: Bijection<Domain,Codomain>) -> Bool{
+extension Injection:Equatable{
+    public static func ==(lhs: Injection<Domain,Codomain>, rhs: Injection<Domain,Codomain>) -> Bool{
         return lhs.preImage == lhs.preImage && lhs.image == lhs.image
     }
 }
 
-extension Bijection:Collection{
+extension Injection:Collection{
     public typealias Index = Int
     
     public var startIndex: Int {

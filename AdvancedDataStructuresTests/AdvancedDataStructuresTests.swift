@@ -12,8 +12,8 @@ import XCTest
 
 class AdvancedDataStructuresTests: XCTestCase {
     
-    var bijection1 = Bijection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
-    var bijection2 = Bijection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
+    var bijection1 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
+    var bijection2 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
     
     
     

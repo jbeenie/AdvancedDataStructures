@@ -10,8 +10,9 @@
 		9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
 		9F5106CF1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */; };
 		9F5106D11EA499DA00B91D9F /* AdvancedDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5106C31EA499D900B91D9F /* AdvancedDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F5106DB1EA49A1800B91D9F /* Bijection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DA1EA49A1800B91D9F /* Bijection.swift */; };
 		9F5106DE1EA4A3F400B91D9F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */; };
+		9F5EC7031EA5E79700D7CF6E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EC7021EA5E79700D7CF6E /* Injection.swift */; };
+		9F5EC70C1EA5ED7F00D7CF6E /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EC70B1EA5ED7F00D7CF6E /* Mapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,9 @@
 		9F5106C91EA499D900B91D9F /* AdvancedDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5106CE1EA499DA00B91D9F /* AdvancedDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDataStructuresTests.swift; sourceTree = "<group>"; };
 		9F5106D01EA499DA00B91D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F5106DA1EA49A1800B91D9F /* Bijection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bijection.swift; sourceTree = "<group>"; };
 		9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		9F5EC7021EA5E79700D7CF6E /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		9F5EC70B1EA5ED7F00D7CF6E /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 		9F4278C11EA5837C00F47125 /* Mappings */ = {
 			isa = PBXGroup;
 			children = (
-				9F5106DA1EA49A1800B91D9F /* Bijection.swift */,
+				9F5EC7021EA5E79700D7CF6E /* Injection.swift */,
+				9F5EC70B1EA5ED7F00D7CF6E /* Mapping.swift */,
 			);
 			name = Mappings;
 			sourceTree = "<group>";
@@ -221,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5EC70C1EA5ED7F00D7CF6E /* Mapping.swift in Sources */,
+				9F5EC7031EA5E79700D7CF6E /* Injection.swift in Sources */,
 				9F5106DE1EA4A3F400B91D9F /* FoundationExtensions.swift in Sources */,
-				9F5106DB1EA49A1800B91D9F /* Bijection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +427,7 @@
 				9F5106D31EA499DA00B91D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9F5106D41EA499DA00B91D9F /* Build configuration list for PBXNativeTarget "AdvancedDataStructures" */ = {
 			isa = XCConfigurationList;
@@ -432,7 +436,7 @@
 				9F5106D61EA499DA00B91D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9F5106D71EA499DA00B91D9F /* Build configuration list for PBXNativeTarget "AdvancedDataStructuresTests" */ = {
 			isa = XCConfigurationList;
@@ -441,7 +445,7 @@
 				9F5106D91EA499DA00B91D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
