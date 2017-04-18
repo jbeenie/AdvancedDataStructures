@@ -7,9 +7,16 @@
 //
 
 import XCTest
+
 @testable import AdvancedDataStructures
 
 class AdvancedDataStructuresTests: XCTestCase {
+    
+    
+    var bijection1 = Bijection<Double,String>(preImage: [0.1,0.2,0.4], image: ["0.1","0.2","0.4"])
+    var bijection2 = Bijection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
+    
+    
     
     override func setUp() {
         super.setUp()
@@ -21,16 +28,57 @@ class AdvancedDataStructuresTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEquality() {
+        XCTAssert(bijection1 ==  bijection2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAdd(){
+        XCTAssert(bijection2[0.3] ==  nil)
+        bijection2[0.3] = "0.3"
+        XCTAssert(bijection2[0.3] ==  "0.3")
+
+    }
+    
+    func testRemove(){
+        XCTAssert(bijection2[0.4] ==  "0.4")
+        bijection2[0.4] = nil
+        XCTAssert(bijection2[0.4] ==  nil)
+    }
+    
+    func testLoop(){
+        for (x,y) in bijection2{
+            print(x,y)
         }
     }
+    
+    func testProperties(){
+        print(bijection2.pairs)
+        print(bijection2.preImage)
+        print(bijection2.image)
+        print(bijection2.count)
+        print(bijection2.isEmpty)
+        print(bijection2.description)
+        print(bijection2)
+    }
+    
+    func testfailedInitialization(){
+        let failed1 = Bijection<Double,String>(preImage: [0.1,0], image: ["0.1"])
+        XCTAssert(failed1 ==  nil)
+        let failed2 = Bijection<Double,String>(preImage: [0.1,0], image: ["0.1","0.2","0.3"])
+        XCTAssert(failed2 ==  nil)
+
+    }
+    
+    func testReplace(){
+        print(bijection2.description)
+        bijection2[0.1] = "0.2"
+        XCTAssert(bijection2[0.2] == nil)
+        XCTAssert(bijection2["0.1"] == nil)
+        XCTAssert(bijection2.count == 2)
+        XCTAssert(bijection2[0.1] == "0.2")
+        print(bijection2.description)
+
+    }
+    
     
 }

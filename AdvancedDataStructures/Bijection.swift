@@ -21,8 +21,24 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
         return _image
     }
     
-    var pairCount:Int{
-        return preImage.count
+    
+    var isEmpty:Bool{
+        return preImage.isEmpty
+    }
+    
+    var pairs:[(Domain,Codomain)]{
+        return preImage.enumerated().map
+            {(i:Int,x:Domain)->(Domain,Codomain) in return (x,image[i])}
+    }
+    
+    var description:String{
+        var description = ""
+        guard !isEmpty else {return description}
+        description += "\(pairs[0])"
+        for pair in pairs.suffix(from: 1){
+            description += ", \(pair)"
+        }
+        return description
     }
     
     //MARK:  Subscritps
@@ -62,7 +78,12 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
     
     //MARK: - Initializers
     
-    init(preImage:[Domain], image:[Codomain]) {
+    init() {
+        self.init(pairs: [])
+    }
+    
+    init?(preImage:[Domain], image:[Codomain]) {
+        guard preImage.count == image.count else {return nil}
         self._preImage = preImage
         self._image = image
     }
@@ -118,8 +139,30 @@ struct Bijection<Domain:Hashable,Codomain:Hashable>{
         _preImage.remove(at: i)
         _image.remove(at: i)
     }
+}
+
+extension Bijection:Equatable{
+    static func ==(lhs: Bijection<Domain,Codomain>, rhs: Bijection<Domain,Codomain>) -> Bool{
+        return lhs.preImage == lhs.preImage && lhs.image == lhs.image
+    }
+}
+
+extension Bijection:Collection{
+    typealias Index = Int
     
+    var startIndex: Int {
+        return 0
+    }
     
+    var endIndex: Int {
+        return self.preImage.count
+    }
     
+    func index(after i: Int) -> Int {
+        return i + 1
+    }
     
+    subscript(index: Int)->(Domain,Codomain){
+        return self.pairs[index]
+    }
 }
