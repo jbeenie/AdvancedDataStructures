@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6946BB65CD5D73F84BCD3502 /* Pods_AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2564DD4F6514561E9E6E7D /* Pods_AdvancedDataStructures.framework */; };
+		6ACEC936254793B1A07BECD4 /* Pods_AdvancedDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7272D5AB09389B098B1C452 /* Pods_AdvancedDataStructuresTests.framework */; };
 		9F0C35011EA6A4C600217605 /* InjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C35001EA6A4C600217605 /* InjectionTests.swift */; };
 		9F0C35031EA6A57400217605 /* MappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C35021EA6A57400217605 /* MappingTests.swift */; };
 		9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08DCD0610D618728F7F924AD /* Pods-AdvancedDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedDataStructuresTests/Pods-AdvancedDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D797E025B102A851FF5DCC2 /* Pods-AdvancedDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedDataStructures/Pods-AdvancedDataStructures.release.xcconfig"; sourceTree = "<group>"; };
+		878B4DF6CC6A8856978FD2EB /* Pods-AdvancedDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedDataStructures/Pods-AdvancedDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
+		8D3B0D9D4378DA26A27DE2BA /* Pods-AdvancedDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedDataStructuresTests/Pods-AdvancedDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0C35001EA6A4C600217605 /* InjectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionTests.swift; sourceTree = "<group>"; };
 		9F0C35021EA6A57400217605 /* MappingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingTests.swift; sourceTree = "<group>"; };
 		9F5106C01EA499D900B91D9F /* AdvancedDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvancedDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +43,8 @@
 		9F5106DD1EA4A3F400B91D9F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		9F5EC7021EA5E79700D7CF6E /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		9F5EC70B1EA5ED7F00D7CF6E /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
+		D7272D5AB09389B098B1C452 /* Pods_AdvancedDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancedDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2564DD4F6514561E9E6E7D /* Pods_AdvancedDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancedDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6946BB65CD5D73F84BCD3502 /* Pods_AdvancedDataStructures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +61,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1A7F641EA5D8D200BDA74E /* AdvancedDataStructures.framework in Frameworks */,
+				6ACEC936254793B1A07BECD4 /* Pods_AdvancedDataStructuresTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6E0BEE5D641D4DC0C7DDC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				878B4DF6CC6A8856978FD2EB /* Pods-AdvancedDataStructures.debug.xcconfig */,
+				3D797E025B102A851FF5DCC2 /* Pods-AdvancedDataStructures.release.xcconfig */,
+				8D3B0D9D4378DA26A27DE2BA /* Pods-AdvancedDataStructuresTests.debug.xcconfig */,
+				08DCD0610D618728F7F924AD /* Pods-AdvancedDataStructuresTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F4278C11EA5837C00F47125 /* Mappings */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +94,8 @@
 				9F5106C21EA499D900B91D9F /* AdvancedDataStructures */,
 				9F5106CD1EA499DA00B91D9F /* AdvancedDataStructuresTests */,
 				9F5106C11EA499D900B91D9F /* Products */,
+				3F6E0BEE5D641D4DC0C7DDC7 /* Pods */,
+				FD8A3C314057ADBA55905D22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +137,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		FD8A3C314057ADBA55905D22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD2564DD4F6514561E9E6E7D /* Pods_AdvancedDataStructures.framework */,
+				D7272D5AB09389B098B1C452 /* Pods_AdvancedDataStructuresTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -132,10 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F5106D41EA499DA00B91D9F /* Build configuration list for PBXNativeTarget "AdvancedDataStructures" */;
 			buildPhases = (
+				DEA11474D09497319F488B5E /* [CP] Check Pods Manifest.lock */,
 				9F5106BB1EA499D900B91D9F /* Sources */,
 				9F5106BC1EA499D900B91D9F /* Frameworks */,
 				9F5106BD1EA499D900B91D9F /* Headers */,
 				9F5106BE1EA499D900B91D9F /* Resources */,
+				52E5B9F4A9553EF982678236 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F5106D71EA499DA00B91D9F /* Build configuration list for PBXNativeTarget "AdvancedDataStructuresTests" */;
 			buildPhases = (
+				D9D27D55E4D36AE4452E278F /* [CP] Check Pods Manifest.lock */,
 				9F5106C51EA499D900B91D9F /* Sources */,
 				9F5106C61EA499D900B91D9F /* Frameworks */,
 				9F5106C71EA499D900B91D9F /* Resources */,
+				803F1DD9D76570E7B91D56D2 /* [CP] Embed Pods Frameworks */,
+				7F80DE55EC6734FCC7239914 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +258,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52E5B9F4A9553EF982678236 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedDataStructures/Pods-AdvancedDataStructures-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F80DE55EC6734FCC7239914 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedDataStructuresTests/Pods-AdvancedDataStructuresTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		803F1DD9D76570E7B91D56D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedDataStructuresTests/Pods-AdvancedDataStructuresTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D27D55E4D36AE4452E278F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA11474D09497319F488B5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F5106BB1EA499D900B91D9F /* Sources */ = {
@@ -356,6 +471,7 @@
 		};
 		9F5106D51EA499DA00B91D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 878B4DF6CC6A8856978FD2EB /* Pods-AdvancedDataStructures.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -377,6 +493,7 @@
 		};
 		9F5106D61EA499DA00B91D9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D797E025B102A851FF5DCC2 /* Pods-AdvancedDataStructures.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -397,8 +514,9 @@
 		};
 		9F5106D81EA499DA00B91D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3B0D9D4378DA26A27DE2BA /* Pods-AdvancedDataStructuresTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 884AY45F52;
 				INFOPLIST_FILE = AdvancedDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -410,8 +528,9 @@
 		};
 		9F5106D91EA499DA00B91D9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08DCD0610D618728F7F924AD /* Pods-AdvancedDataStructuresTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 884AY45F52;
 				INFOPLIST_FILE = AdvancedDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

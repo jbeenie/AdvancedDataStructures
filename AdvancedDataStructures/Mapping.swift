@@ -26,7 +26,7 @@ public struct Mapping<Domain,Codomain>{
         }
     }
     
-    init(map: @escaping (Domain)->Codomain, inverse: @escaping (Codomain)->Domain)
+    public init(map: @escaping (Domain)->Codomain, inverse: @escaping (Codomain)->Domain)
     {
         self.map = map
         self.inverse = inverse

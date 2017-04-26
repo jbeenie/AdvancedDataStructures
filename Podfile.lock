@@ -1,0 +1,12 @@
+PODS:
+  - OrderedSet (2.0.0)
+
+DEPENDENCIES:
+  - OrderedSet (= 2.0)
+
+SPEC CHECKSUMS:
+  OrderedSet: 08303f2ece22d2737eeff7571fa89a9d338afc74
+
+PODFILE CHECKSUM: 3a3b07cef2df182dc79f750292b13ed684f8c924
+
+COCOAPODS: 1.2.1
