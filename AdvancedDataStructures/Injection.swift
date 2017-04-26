@@ -15,10 +15,10 @@ public struct Injection<Domain:Hashable,Codomain:Hashable>{
     //MARK: Computed Properties
     
     //MARK: Stored Properties
-    public var preImage:[Domain]{
+    public var preImage:OrderedSet<Domain>{
         return _preImage
     }
-    public var image:[Codomain]{
+    public var image:OrderedSet<Codomain>{
         return _image
     }
     
@@ -80,24 +80,30 @@ public struct Injection<Domain:Hashable,Codomain:Hashable>{
     //MARK: - Initializers
     
     public init() {
-        self.init(pairs: [])
+        self.init(pairs: [])!
     }
     
-    
-    public init(pairs:[(Domain,Codomain)]) {
-        self._preImage = [Domain]()
-        self._image = [Codomain]()
+    //Fails if an x or y component of pair is equal to one another x or y component of another pair (via ==)
+    //eg. following input: [(true, "4"), (true,"5")] would cause failure because true==true
+
+    public init?(pairs:[(Domain,Codomain)]) {
+        self._preImage = OrderedSet<Domain>()
+        self._image = OrderedSet<Codomain>()
         //Populate domain and codomain using pairs
         for (x,y) in pairs{
+            //fail initialization if duplicate x or y component encountered
+            guard !self.preImage.contains(x), !self.image.contains(y) else {return nil}
             self.map(x: x, toY: y)
         }
+        //double check pairs.count == image.count == preImage.count
+        guard pairs.count == image.count, image.count  == preImage.count else {return nil}
     }
     
     //MARK: - Private implementation Logic
     
     //MARK: Stored Properties
-    private var _preImage:[Domain]
-    private var _image:[Codomain]
+    private var _preImage:OrderedSet<Domain>
+    private var _image:OrderedSet<Codomain>
     
     //MARK: - Getters
     private func getImage(of x:Domain)->Codomain?{
@@ -125,15 +131,15 @@ public struct Injection<Domain:Hashable,Codomain:Hashable>{
     }
     
     private mutating func unMap(x:Domain){
-        guard let i = _preImage.index(of: x) else {return}
-        _preImage.remove(at: i)
-        _image.remove(at: i)
+        guard _preImage.contains(x), let y = self.getImage(of:x) else {return}
+        _preImage.remove(x)
+        _image.remove(y)
     }
     
     private mutating func unMap(y:Codomain){
-        guard let i = _image.index(of: y) else {return}
-        _preImage.remove(at: i)
-        _image.remove(at: i)
+        guard _image.contains(y), let x = self.getPreImage(of:y) else {return}
+        _preImage.remove(x)
+        _image.remove(y)
     }
 }
 
