@@ -18,7 +18,7 @@ Both DSs can be used to establish a bidirectional map between elements of type `
 The `Mapping` DS has two instance properties:
 
 1. `map:(Domain)->Codomain` 
-2. `inverse:`(Codomain)->Domain`
+2. `inverse:(Codomain)->Domain`
 
 which are used to establish the bidirectional map. 
 
