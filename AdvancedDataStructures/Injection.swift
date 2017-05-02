@@ -99,7 +99,7 @@ public struct Injection<Domain:Hashable,Codomain:Hashable>{
         guard pairs.count == image.count, image.count  == preImage.count else {return nil}
     }
     
-    //MARK: - Private implementation Logic
+    //MARK: - Private implementation
     
     //MARK: Stored Properties
     private var _preImage:OrderedSet<Domain>

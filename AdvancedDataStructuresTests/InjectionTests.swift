@@ -13,9 +13,13 @@ import XCTest
 
 class InjectionTests: XCTestCase {
     
-    var injection1 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
-    var injection2 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
+    var injection1 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )!
+    var injection2 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )!
     
+    var failedInjection1 = Injection<Double,String>(pairs: [(0.1,"0.1"),(0.1,"0.2"),(0.4,"0.4")] )
+    var failedInjection2 = Injection<Double,String>(pairs: [(0.2,"0.1"),(0.2,"0.2"),(0.4,"0.4")] )
+    var failedInjection3 = Injection<Double,String>(pairs: [(0.2,"0.2"),(0.2,"0.2"),(0.4,"0.4")] )
+
     
     
     override func setUp() {
@@ -26,6 +30,12 @@ class InjectionTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testInit(){
+        XCTAssert(failedInjection1 ==  nil)
+        XCTAssert(failedInjection2 ==  nil)
+        XCTAssert(failedInjection3 ==  nil)
     }
     
     func testEquality() {

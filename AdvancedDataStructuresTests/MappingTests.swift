@@ -15,13 +15,8 @@ class MappingTests: XCTestCase {
     
 
     
-    lazy var map = Mapping<Double,String>(map:
-        { d in
-        return String(d)
-    }
-        , inverse: { s in
-            return Double(s) ?? 0.0
-    })
+    lazy var map = Mapping<Double,String>(map: { d in return String(d)},
+                                          inverse: { s in return Double(s) ?? 0.0})
     
     
     override func setUp() {
