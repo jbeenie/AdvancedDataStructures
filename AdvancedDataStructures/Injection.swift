@@ -85,7 +85,7 @@ public struct Injection<Domain:Hashable,Codomain:Hashable>{
     
     //Fails if an x or y component of pair is equal to one another x or y component of another pair (via ==)
     //eg. following input: [(true, "4"), (true,"5")] would cause failure because true==true
-
+    
     public init?(pairs:[(Domain,Codomain)]) {
         self._preImage = OrderedSet<Domain>()
         self._image = OrderedSet<Codomain>()
